@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  gmail-watcher:
+    build: .
+    container_name: gmail-attachment-watcher
+    stdin_open: true
+    tty: true
+    volumes:
+      # Mount local directory for attachments
+      - ./attachments:/app/attachments
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
