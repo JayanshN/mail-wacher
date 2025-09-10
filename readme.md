@@ -1,4 +1,4 @@
-# �️ Local Development
+# Local Development
 
 You can run the Gmail Attachment Watcher locally for development and testing.
 
@@ -28,7 +28,7 @@ You can run the Gmail Attachment Watcher locally for development and testing.
    ```
 3. Follow the console output for status and logs.
 4. Attachments and summaries will be saved in the `data/attachments` folder.
-# �🐳 Docker Hub Repository: mail-wacher
+# 🐳 Docker Hub Repository: mail-wacher
 
 **Repository URL:** [https://hub.docker.com/r/jayanshn/mail-wacher](https://hub.docker.com/r/jayanshn/mail-wacher)
 
@@ -86,6 +86,7 @@ Monitor your Gmail for attachments and automatically generate AI summaries for P
    ```
 2. **Start the container:**
    ```sh
+   docker run -it --rm -v %cd%/attachments:/app/attachments jayanshn/mail-wacher:latest
    ```
    - For Windows, use `%cd%/attachments` or `%cd%\attachments` as appropriate.
 3. **Or use Docker Compose:**
